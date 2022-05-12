@@ -2,6 +2,9 @@ name: Build/release
 
 on: push
 
+env:
+  GH_TOKEN: ${{ secrets.JOSE_ADE }}
+
 jobs:
   release:
     runs-on: macos-latest
@@ -14,7 +17,7 @@ jobs:
         with:
           node-version: 14
 
-      - name: Install dependencies Build/release Electron app
+      - name: Install dependencies
         run: npm install
         
       - name: Build/release Electron app
