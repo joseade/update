@@ -16,6 +16,3 @@ jobs:
 
       - name: Build/release Electron app
         run: npm run release
-        env:
-          GH_TOKEN: ${{ secrets.JOSE_ADE}}
-            
