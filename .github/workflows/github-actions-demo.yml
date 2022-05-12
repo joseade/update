@@ -20,11 +20,11 @@ jobs:
           node-version: 10
 
       - name: Build/release Electron app
-        uses: samuelmeuli/action-electron-builder@v1
+        uses: joseade/update@v1
         with:
           # GitHub token, automatically provided to the action
           # (No need to define this secret in the repo settings)
-          github_token: ${{ secrets.github_token }}
+          GH_TOKEN: ${{ secrets.JOSE_ADE }}
 
           # If the commit is tagged with a version (e.g. "v1.0.0"),
           # release the app after building
