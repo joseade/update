@@ -1,26 +1,48 @@
 {
-  "name": "master-electron",
-  "version": "1.0.0",
+  "name": "Readit",
+  "version": "2.0.1",
   "description": "Master Electron Course Code",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "watch": "nodemon --exec electron .",
-    "reset": "git reset --hard"
+    "reset": "git reset --hard",
+    "build": "electron-builder -mwl",
+    "release": "electron-builder -mwl -p 'onTagOrDraft'"
   },
-  "repository": "https://github.com/stackacademytv/master-electron",
+  "repository": "https://github.com/joseade/update",
+  "homepage": "https://github.com/joseade/update",
   "keywords": [
     "Electron",
     "Master Electron",
     "demo"
   ],
-  "author": "GitHub, Stackacademytv",
+  "author": "Adelino",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^9.0.0",
+    "electron-builder": "^23.0.3",
     "nodemon": "^2.0.0"
   },
   "dependencies": {
+    "electron-log": "^4.4.7",
+    "electron-updater": "^5.0.1",
     "electron-window-state": "^5.0.3"
+  },
+  "build": {
+    "appId": "com.github.joseade.update",
+    "publish": {
+      "provider": "github"
+    },
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "win": {
+      "certificateFile": "./private/codeone.pfx",
+      "certificatePassword": "jose"
+    },
+    "linux": {
+      "category": "Utility"
+    }
   }
 }
