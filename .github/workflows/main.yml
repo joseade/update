@@ -1,0 +1,21 @@
+name: Build/release
+
+on: push
+
+jobs:
+  release:
+    runs-on: macos-latest
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Install Node.js, NPM and Yarn
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
+      - name: Install dependencies Build/release Electron app
+        run: npm install
+        
+      - name: Build/release Electron app
+        run: npm run release
