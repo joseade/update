@@ -20,7 +20,7 @@ jobs:
           node-version: 10
 
       - name: Build/release Electron app
-        uses: joseade/update@v1
+        uses: joseade/update
         with:
           # GitHub token, automatically provided to the action
           # (No need to define this secret in the repo settings)
