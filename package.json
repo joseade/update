@@ -7,8 +7,8 @@
     "start": "electron .",
     "watch": "nodemon --exec electron .",
     "reset": "git reset --hard",
-    "build": "electron-builder -l",
-    "release": "electron-builder -l -p 'onTagOrDraft'"
+    "build": "electron-builder -m",
+    "release": "electron-builder -m -p 'onTagOrDraft'"
   },
   "repository": "https://github.com/joseade/update",
   "homepage": "https://github.com/joseade/update",
