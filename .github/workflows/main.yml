@@ -40,3 +40,10 @@ jobs:
 
       - name: Build/release Electron app
         run: CSC_LINK="${{ secrets.MAC_CERT }}" CSC_KEY_PASSWORD="${{ secrets.MAC_CERT_PASSWORD }}" WIN_CSC_LINK="${{ secrets.WINDOWS_CERT }}" WIN_CSC_KEY_PASSWORD="jose" npm run release
+
+      - name: Publish release
+        uses: StuYarrow/publish-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.JOSE_ADE  }}
+        with:
+          id: ${{ steps.create_release.outputs.id }}
