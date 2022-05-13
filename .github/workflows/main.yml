@@ -13,7 +13,7 @@ jobs:
         run: echo "${{github.ref}}"
       - name: Log2
         run: echo "${{startsWith(github.ref, 'refs/tags/v')}}"
-        
+
       - name: Check out Git repository
         uses: actions/checkout@v3
 
@@ -24,6 +24,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        
+
       - name: Build/release Electron app
-        run: WIN_CSC_LINK="${{ secrets.WINDOWS_CERT }}" WIN_CSC_KEY_PASSWORD="jose" npm run release
+        run: CSC_LINK="${{ secrets.MAC_CERT }}" CSC_KEY_PASSWORD="${{ secrets.MAC_CERT_PASSWORD }}" WIN_CSC_LINK="${{ secrets.WINDOWS_CERT }}" WIN_CSC_KEY_PASSWORD="jose" npm run release
