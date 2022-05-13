@@ -38,7 +38,6 @@
       "category": "public.app-category.productivity"
     },
     "win": {
-      "certificateFile": "./private/codeone.pfx",
       "certificatePassword": "jose"
     },
     "linux": {
