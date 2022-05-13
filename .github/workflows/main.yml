@@ -2,8 +2,8 @@ name: Build/release
 
 on: push
 
-# env:
-#   GH_TOKEN: ${{ secrets.JOSE_ADE }}
+env:
+  GH_TOKEN: ${{ secrets.JOSE_ADE }}
 
 jobs:
   release:
@@ -22,7 +22,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: "v2.1.6"
+          tag_name: ${{github.ref}}
 
       - name: Install Node.js, NPM and Yarn
         uses: actions/setup-node@v3
