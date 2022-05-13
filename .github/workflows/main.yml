@@ -2,8 +2,8 @@ name: Build/release
 
 on: push
 
-env:
-  GH_TOKEN: ${{ secrets.JOSE_ADE }}
+# env:
+#   GH_TOKEN: ${{ secrets.JOSE_ADE }}
 
 jobs:
   release:
