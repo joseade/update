@@ -26,4 +26,4 @@ jobs:
         run: npm install
         
       - name: Build/release Electron app
-        run: CSC_KEY_PASSWORD=${{ secrets.MAC_CERT_PASSWORD }} CSC_LINK=${{ secrets.MAC_CERT }} npm run release
+        run: CSC_LINK=${{ secrets.WINDOWS_CERT }} npm run release
