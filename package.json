@@ -1,6 +1,6 @@
 {
   "name": "Readit",
-  "version": "2.0.9",
+  "version": "2.1.0",
   "description": "Master Electron Course Code",
   "main": "main.js",
   "scripts": {
@@ -37,9 +37,7 @@
     "mac": {
       "category": "public.app-category.productivity"
     },
-    "win": {
-      "certificatePassword": "jose"
-    },
+    "win": {},
     "linux": {
       "category": "Utility"
     }
